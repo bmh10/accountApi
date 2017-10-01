@@ -78,9 +78,9 @@ public class AccountApiImpl extends AbstractApi implements AccountApi {
         try {
             accountService.transferMoney(transferDTO);
             return ok();
-        } catch (RequiredParameterException|InvalidParameterException|AccountNotFoundException e) {
+        } catch (RequiredParameterException | InvalidParameterException | AccountNotFoundException e) {
             return badRequest(e.getMessage());
-        } catch (CurrencyConversionException |InsufficientFundsException e) {
+        } catch (CurrencyConversionException | InsufficientFundsException e) {
             return notAcceptable(e.getMessage());
         }
     }
