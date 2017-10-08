@@ -185,7 +185,7 @@ public class AccountServiceIntegrationTest {
     }
 
     @Test
-    public void transferMoney_whenSuccessful_accountBalancedUpdatedCorrectly() throws InvalidParameterException, AccountNotFoundException, RequiredParameterException, CurrencyConversionException, InsufficientFundsException {
+    public void transferMoney_whenSuccessful_accountBalanceUpdatedCorrectly() throws InvalidParameterException, AccountNotFoundException, RequiredParameterException, CurrencyConversionException, InsufficientFundsException {
         TransferDTO transferDTO = AccountTestHelper.createTransferDTO();
         AccountDTO srcAccountDTO = AccountTestHelper.createAccountDTO(1);
         AccountDTO dstAccountDTO = AccountTestHelper.createAccountDTO(2);
